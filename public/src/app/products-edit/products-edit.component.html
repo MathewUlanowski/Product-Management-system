@@ -1,0 +1,43 @@
+
+<div class="border border-dark">
+        <h1>Update Product</h1>
+        <div *ngIf="Errors">
+            <ul *ngFor="let error of Errors">
+                <li class="bg-danger text-white">{{ error }}</li>
+            </ul>
+        </div>
+        <table class="table table-borderless">
+            <tr>
+                <td>
+                    <h2>Name</h2>
+                </td>
+                <td>
+                    <input type="text" [(ngModel)]="Product.name" name="name">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h2>Qty</h2>
+                </td>
+                <td>
+                    <input type="number" [(ngModel)]="Product.QTY" name="QTY">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <h2>Price</h2>
+                </td>
+                <td>
+                    <input type="number" [(ngModel)]="Product.ProductPrice" name="ProductPrice">
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <button class="btn btn-success" (click)="navHome()">BACK</button>
+                    <button class="btn btn-warning" (click)="EditProduct(Product._id)">Update</button>
+                    <button class="btn btn-danger" (click)="Reset()">Reset</button>
+                </td>
+            </tr>
+        </table>
+    </div>

@@ -1,0 +1,28 @@
+<div>
+    <h1>Products List</h1>
+    <button (click)="navNew()">Add New Products</button>
+    
+    <table class="table table-striped">
+        <thead class="thead-dark">
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>QTY</th>
+                <th>Price</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr scope="row" *ngFor="let product of Products;">
+                <td>{{ product._id }}</td>
+                <td>{{ product.name }}</td>
+                <td>{{ product.QTY }}</td>
+                <td>${{ product.ProductPrice }}</td>
+                <td>
+                    <button class="btn btn-warning" (click)="navEdit(product._id)">Edit</button>
+                    <button class="btn btn-primary" (click)="detailNav(product._id)">Details</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

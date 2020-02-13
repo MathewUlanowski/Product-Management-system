@@ -1,0 +1,30 @@
+<div class="border border-dark">
+    <h1>Product Details</h1>
+    <table class="table table-borderless">
+        <tr>
+            <td>
+                <h2>Name</h2>
+            </td>
+            <td>{{ Product.name }}</td>
+        </tr>
+        <tr>
+            <td>
+                <h2>Qty</h2>
+            </td>
+            <td>{{ Product.QTY }}</td>
+        </tr>
+        <tr>
+            <td>
+                <h2>Price</h2>
+            </td>
+            <td>{{ Product.ProductPrice }}</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <button class="btn btn-outline-primary" (click)="navHome()">BACK</button>
+                <button class="btn btn-outline-danger" (click)="delete(Product._id)">DELETE</button>
+            </td>
+        </tr>
+    </table>
+</div>
